@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#8DBDD1</color>
+    <color name="colorPrimaryDark">#63a2bc</color>
+    <color name="colorPrimaryLight">#9ec9db</color>
+
+    <color name="colorAccent">#7c4dff</color>
+    <color name="colorPress">#a788f0f2</color>
+
+    <color name="textColorPrimary">#292929</color>
+    <color name="textColorSecondary">#757575</color>
+
+    <color name="iconPrimary">#4b4b4b</color>
+    <color name="iconSecondary">#424242</color>
+
+    <!--Base color-->
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#e53935</color>
+    <color name="blue">#2196F3</color>
+    <color name="pink">#ff4081</color>
+    <color name="green">#49a14c</color>
+    <color name="yellow">#f8e71c</color>
+    <color name="orange">#f5a623</color>
+    <color name="grey">#9E9E9E</color>
+
+    <color name="black_20">#33000000</color>
+    <color name="black_30">#4D000000</color>
+    <color name="black_40">#55000000</color>
+    <color name="black_60">#90000000</color>
+
+
+    <integer-array name="mycolors">
+        <item>@color/red</item>
+        <item>@color/blue</item>
+        <item>@color/pink</item>
+        <item>@color/orange</item>
+        <item>@color/green</item>
+    </integer-array>
+
+    <color name="candidate_normal">#FF000000</color>
+    <color name="candidate_recommended">#000000</color>
+    <color name="candidate_other">#ff808080</color>
+    <color name="candidate_background">#bbffffff</color>
+</resources>

@@ -1,0 +1,101 @@
+    Map<String, String> arrMyAnswer = new Gson().fromJson(myAnswer, new TypeToken<Map<String, String>>() {
+                }.getType());
+
+
+
+    private void showDialogMore(Video obj, int position) {
+        Dialog dialog = new Dialog(context);
+        View view = LayoutInflater.from(context).inflate(R.layout.dialog_more, null, false);
+
+        view.findViewById(R.id.btn_rename).setOnClickListener(view13 -> {
+            try {
+                showDialogRename(obj, position);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            dialog.dismiss();
+        });
+        view.findViewById(R.id.btn_share).setOnClickListener(view13 -> {
+            IntentUtils.shareVideo(context, obj.getPath());
+            dialog.dismiss();
+        });
+        view.findViewById(R.id.btn_delete).setOnClickListener(view1 -> {
+            File file = new File(obj.getPath());
+            boolean delete = file.delete();
+            context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(file)));
+            if (delete) {
+                remove(position);
+                Toast.makeText(context, R.string.success, Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(context, R.string.error, Toast.LENGTH_SHORT).show();
+            }
+            dialog.dismiss();
+        });
+
+        view.findViewById(R.id.btn_cancel).setOnClickListener(view14 -> dialog.dismiss());
+
+        dialog.setCancelable(true);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(view);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.show();
+    }
+
+
+    //    @Override
+    //    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    //        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    //        if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+    //            switch (requestCode) {
+    //                case REQUEST_CODE_READ_CONTACTS:
+    //                    initData();
+    //                    break;
+    //            }
+    //        }
+    //
+    //    }
+
+    @Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+            switch (requestCode) {
+                case 0:
+                    switch (resultCode) {
+                        case RESULT_OK:
+                            break;
+                        case RESULT_CANCELED:
+                            break;
+                    }
+                    break;
+            }
+        }
+
+
+
+
+    private void showPopupFps(View view, TextView textView) {
+        PopupMenu popupRight = new PopupMenu(mActivity, view, Gravity.END);
+        popupRight.getMenuInflater().inflate(R.menu.fps, popupRight.getMenu());
+        popupRight.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+                textView.setText(item.getTitle());
+                GlobalFunction.putFPS(mActivity, Integer.parseInt(item.getTitle().toString().replace(" fps/s", "")));
+                return true;
+            }
+        });
+        popupRight.show();
+    }
+
+
+        View custom3 = LayoutInflater.from(this).inflate(R.layout.popup_layout, null);
+        tvTitle3 = (TextView) custom3.findViewById(R.id.tv_title);
+        imvBack = (ImageView) custom3.findViewById(R.id.imv_back);
+        tvTitle3.setPadding(0, DeviceUtils.convertDpToPixel(context, 5), 0, 0);
+        popup3 = new PopupWindow(this);
+        popup3.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        popup3.setWidth((width / 10 * 2) + 2);
+        popup3.setHeight((int) (width / 10 * 2.6));
+        popup3.setContentView(custom3);

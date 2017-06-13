@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/root"
+    android:layout_height="match_parent"
+    tools:context="com.vinsofts.keyborad.view.MainActivity">
+
+    <com.vinsofts.keyborad.widget.fonts.TextViewRobotoBold
+        android:id="@+id/tv_step"
+        android:layout_width="wrap_content"
+        android:text="Step 1"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <LinearLayout
+        android:id="@+id/v_step_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+
+            <com.vinsofts.keyborad.widget.fonts.TextViewRobotoBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keyboard_enable"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <com.vinsofts.keyborad.widget.fonts.TextViewRobotoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:text="@string/mes_enable_keyboard"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <com.vinsofts.keyborad.widget.fonts.TextViewRobotoRegular
+                android:id="@+id/btn_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:background="@drawable/bg_btn_notification"
+                android:gravity="center"
+                android:padding="@dimen/dimen_x1x"
+                android:text="@string/enable"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xnormal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/v_step_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="4">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+
+            <com.vinsofts.keyborad.widget.fonts.TextViewRobotoBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keyboard_default"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <com.vinsofts.keyborad.widget.fonts.TextViewRobotoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:text="@string/mes_set_keyboard_default"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <com.vinsofts.keyborad.widget.fonts.TextViewRobotoRegular
+                android:id="@+id/btn_choose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:background="@drawable/bg_btn_notification"
+                android:gravity="center"
+                android:padding="@dimen/dimen_x1x"
+                android:text="@string/set"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xnormal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

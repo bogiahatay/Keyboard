@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.vinsofts.keyborad.widget.fonts.TextViewRobotoRegular
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dimen_4x"
+        android:layout_marginTop="@dimen/dimen_4x"
+        android:text="@string/app_name"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="50dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:alpha="0.1"
+        android:background="@color/textColorPrimary" />
+
+
+    <RelativeLayout
+        android:id="@+id/btn_sound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.vinsofts.keyborad.widget.fonts.TextViewRobotoRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_2x"
+            android:text="@string/sound"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_xnormal" />
+
+        <Switch
+            android:id="@+id/switch_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:gravity="right"
+            android:paddingRight="@dimen/dimen_2x"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_xnormal" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:alpha="0.1"
+        android:background="@color/textColorPrimary" />
+
+
+    <RelativeLayout
+        android:id="@+id/btn_vibrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.vinsofts.keyborad.widget.fonts.TextViewRobotoRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_2x"
+            android:text="@string/vibrate"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_xnormal" />
+
+        <Switch
+            android:id="@+id/switch_vibrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:gravity="right"
+            android:paddingRight="@dimen/dimen_2x"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_xnormal" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:alpha="0.1"
+        android:background="@color/textColorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/btn_extra_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.vinsofts.keyborad.widget.fonts.TextViewRobotoRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_2x"
+            android:text="@string/extra_row"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_xnormal" />
+
+        <Switch
+            android:id="@+id/switch_extra_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:gravity="right"
+            android:paddingRight="@dimen/dimen_2x"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_xnormal" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:alpha="0.1"
+        android:background="@color/textColorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/btn_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.vinsofts.keyborad.widget.fonts.TextViewRobotoRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_2x"
+            android:text="@string/popup_key"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_xnormal" />
+
+        <Switch
+            android:id="@+id/switch_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:gravity="right"
+            android:paddingRight="@dimen/dimen_2x"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_xnormal" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:alpha="0.1"
+        android:background="@color/textColorPrimary" />
+
+    <EditText
+        android:id="@+id/edt_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

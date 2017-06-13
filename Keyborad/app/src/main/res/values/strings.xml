@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Key Broad</string>
+
+    <string name="simple_ime">Simple IME</string>
+    <string name="subtype_en_US">English (US)</string>
+
+    <string name="ime_name">Sample Soft Keyboard</string>
+
+    <!-- Symbols that are commonly considered word separators in this language -->
+    <string name="word_separators">\u0020.,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|&quot;</string>
+
+    <!-- Labels on soft keys -->
+    <string name="label_go_key">Go</string>
+    <string name="label_next_key">Next</string>
+    <string name="label_send_key">Send</string>
+    <string name="label_done_key">Done</string>
+
+    <!-- Labels for subtype -->
+    <string name="label_subtype_generic">%s</string>
+    <string name="label_subtype_en_GB">English (GB)</string>
+
+    <!-- Titles for ImePreference -->
+    <string name="settings_name">Sample Soft Keyboard Settings</string>
+    <string name="language_selection_title">Input languages</string>
+    <string name="select_language">Select input languages</string>
+    <string name="general_category">General</string>
+    <string name="language_vi">English</string>
+    <string name="language_en">English</string>
+
+    <string name="keyboard_default">Set default keyboard</string>
+    <string name="mes_set_keyboard_default">Set app as your default keyboard</string>
+    <string name="set">Set</string>
+    <string name="enable">Enable</string>
+    <string name="keyboard_enable">Enable Keyborad</string>
+    <string name="mes_enable_keyboard"><![CDATA[You need enable Keyboard in Language & input Settings]]></string>
+    <string name="step_one">Step 1</string>
+    <string name="step_two">Step 2</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="sound">Sounds</string>
+    <string name="extra_row">Show extra row</string>
+    <string name="popup_key">Popup keyborad when press</string>
+</resources>

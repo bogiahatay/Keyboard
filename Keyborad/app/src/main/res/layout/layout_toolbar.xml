@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/imv_back"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:adjustViewBounds="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_back"
+        android:tint="@color/textColorPrimary" />
+
+    <com.vinsofts.keyborad.widget.fonts.TextViewRobotoRegular
+        android:id="@+id/tv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:layout_toEndOf="@+id/imv_back"
+        android:layout_toLeftOf="@+id/imv_more"
+        android:layout_toRightOf="@+id/imv_back"
+        android:layout_toStartOf="@+id/imv_more"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_size_large" />
+
+    <ImageView
+        android:id="@+id/imv_more"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_more_vert"
+        android:tint="@color/textColorPrimary" />
+
+</RelativeLayout>
